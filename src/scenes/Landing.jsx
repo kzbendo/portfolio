@@ -18,7 +18,7 @@ const Landing = ({ setSelectedPage }) => {
         {isAboveMediumScreens ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-right-20
-         before:w-full before:max-w-[400px] before:h-full before:max-h-[400px] before:border-2 before:border-yellow before:z-[-1]"
+         before:rounded-[10px] before:w-full before:max-w-[400px] before:h-full before:max-h-[400px] before:border-2 before:border-yellow before:z-[-1]"
           >
             <motion.div
               initial="hidden"
@@ -33,7 +33,7 @@ const Landing = ({ setSelectedPage }) => {
               <img
                 alt="profile"
                 className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full
-               max-w-[400px] md:max-w-[600px]"
+               max-w-[400px] md:max-w-[600px] rounded-[10px]"
                 src="assets/profile-image.jpg"
               />
             </motion.div>
