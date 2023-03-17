@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         blue: "#33aaaa",
-        red: "#c77f7f",
+        red: "#ff7f7f",
         yellow: "#d4a963",
         grey: "#ededed",
         "deep-blue": "#121c2e",
@@ -24,7 +24,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"],
       },
       content: {
-        brush: "url('./assets/brush.png')",
+        brushstroke: "url('./assets/brushstroke.png')",
         person1: "url('./assets/person-1.png')",
         person2: "url('./assets/person-2.png')",
         person3: "url('./assets/person-3.png')",
