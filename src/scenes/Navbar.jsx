@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { motion } from "framer-motion";
 
 const Link = ({ page, isTopOfPage, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -57,42 +58,65 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             className="rounded-full bg-red p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <img alt="menu-icon" src="../assets/menu-icon.svg" />
+            {" "}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 0 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <img alt="menu-icon" src="../assets/menu-icon.svg" />
+            </motion.div>
           </button>
         )}
         {/* MOBILE MENU POPUP */}
         {!isAboveSmallScreens && isMenuToggled && (
           <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
-            {/* CLOSE ICON */}
-            <div className="flex justify-end p-12">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <img alt="close-icon" src="../assets/close-icon.svg" />
-              </button>
-            </div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 0 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              {/* CLOSE ICON */}
+              <div className="flex justify-end p-12">
+                <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                  <img alt="close-icon" src="../assets/close-icon.svg" />
+                </button>
+              </div>
 
-            {/* MENU ITEMS */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="About"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Projects"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Contact"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-            </div>
+              {/* MENU ITEMS */}
+              <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                <Link
+                  page="Home"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="About"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Projects"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Contact"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+              </div>
+            </motion.div>
           </div>
         )}
       </div>
