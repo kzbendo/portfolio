@@ -730,12 +730,16 @@ video {
   height: 8rem;
 }
 
-.h-full{
-  height: 100%;
+.h-56{
+  height: 14rem;
 }
 
 .h-64{
   height: 16rem;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .max-h-\[400px\]{
@@ -746,12 +750,12 @@ video {
   width: 50%;
 }
 
-.w-2\/3{
-  width: 66.666667%;
+.w-10\/12{
+  width: 83.333333%;
 }
 
-.w-2\/5{
-  width: 40%;
+.w-2\/3{
+  width: 66.666667%;
 }
 
 .w-3{
@@ -768,10 +772,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.w-10\/12{
-  width: 83.333333%;
 }
 
 .max-w-\[400px\]{
@@ -1041,19 +1041,14 @@ video {
   color: rgb(255 127 127 / var(--tw-text-opacity));
 }
 
-.text-yellow{
-  --tw-text-opacity: 1;
-  color: rgb(212 169 99 / var(--tw-text-opacity));
-}
-
-.text-blue{
-  --tw-text-opacity: 1;
-  color: rgb(51 170 170 / var(--tw-text-opacity));
-}
-
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow{
+  --tw-text-opacity: 1;
+  color: rgb(212 169 99 / var(--tw-text-opacity));
 }
 
 .placeholder-opaque-black::-webkit-input-placeholder{
@@ -1133,6 +1128,31 @@ body,
 .before\:top-\[-50\%\]::before{
   content: var(--tw-content);
   top: -50%;
+}
+
+.before\:-left-\[10px\]::before{
+  content: var(--tw-content);
+  left: -10px;
+}
+
+.before\:-top-\[6px\]::before{
+  content: var(--tw-content);
+  top: -6px;
+}
+
+.before\:-top-\[4px\]::before{
+  content: var(--tw-content);
+  top: -4px;
+}
+
+.before\:-top-\[2px\]::before{
+  content: var(--tw-content);
+  top: -2px;
+}
+
+.before\:-left-\[8px\]::before{
+  content: var(--tw-content);
+  left: -8px;
 }
 
 .before\:z-\[-1\]::before{
@@ -1268,6 +1288,11 @@ body,
 
   .xs\:before\:content-brushstroke::before{
     --tw-content: url('./assets/brushstroke.png');
+    content: var(--tw-content);
+  }
+
+  .xs\:before\:content-brushstroke2::before{
+    --tw-content: url('./assets/brushstroke2.png');
     content: var(--tw-content);
   }
 }

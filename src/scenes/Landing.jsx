@@ -73,20 +73,41 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text:start whitespace-nowrap">
-            Kenneth {""}
-            <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 
+          {isAboveMediumScreens ? (
+            <div>
+              <p className="text-6xl font-playfair z-10 text-center md:text:start whitespace-nowrap">
+                Kenneth {""}
+                <span
+                  className="xs:relative xs:text-deep-blue xs:font-semibold z-20 
                 xs:before:content-brushstroke before:absolute before:-left-[20px] 
                 before:-top-[12px] before:z-[-1]"
-            >
-              Bendo
-            </span>
-          </p>
+                >
+                  Bendo
+                </span>
+              </p>
 
-          <p className="xs:text-red mt-10 mb-7 text-sm text-center md:text-start">
-            Rising Developer. Future Explorer.
-          </p>
+              <p className="xs:text-red mt-10 mb-7 text-sm text-center md:text-start">
+                Rising Developer. Future Explorer.
+              </p>
+            </div>
+          ) : (
+            <div>
+              <p className="text-4xl font-playfair z-10 text-center md:text:start whitespace-nowrap">
+                Kenneth {""}
+                <span
+                  className="xs:relative xs:text-deep-blue xs:font-semibold z-20 
+                  xs:before:content-brushstroke2 before:absolute before:-left-[8px] 
+                  before:-top-[2px] before:z-[-1]"
+                >
+                  Bendo
+                </span>
+              </p>
+
+              <p className="xs:text-red mt-10 mb-7 text-sm text-center md:text-start">
+                Rising Developer. Future Explorer.
+              </p>
+            </div>
+          )}
         </motion.div>
 
         {/* CALL TO ACTIONS */}
