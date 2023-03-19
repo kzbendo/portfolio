@@ -15,9 +15,6 @@ const Link = ({ page, isTopOfPage, selectedPage, setSelectedPage }) => {
       {page}
     </AnchorLink>
   );
-  {
-    /* you can pass constant vars inside classNames by using ${constVar} to put conditional values, etc. */
-  }
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
