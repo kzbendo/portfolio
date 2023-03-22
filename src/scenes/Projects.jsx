@@ -68,7 +68,6 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
-
           <Project
             title="Portfolio"
             subtitle="Simple responsive web app powered by React with Tailwind, Framer Motion, and React Hook Form."
