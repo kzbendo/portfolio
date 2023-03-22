@@ -52,10 +52,6 @@ const Projects = () => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at.
-        </p>
       </motion.div>
 
       {/* PROJECTS */}
