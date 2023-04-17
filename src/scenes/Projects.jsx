@@ -13,7 +13,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, subtitle }) => {
+const Project = ({ title, subtitle, link }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -21,10 +21,16 @@ const Project = ({ title, subtitle }) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">{subtitle}</p>
+        <a href={link} target="_blank" rel="noreferrer">
+          <p className="text-2xl font-playfair select-none">{title}</p>
+          <p className="mt-7 select-none">{subtitle}</p>
+        </a>
       </div>
-      <img src={`../assets/${projectTitle}.jpg`} alt={projectTitle} />
+      <img
+        className="w-full"
+        src={`../assets/${projectTitle}.jpg`}
+        alt={projectTitle}
+      />
     </motion.div>
   );
 };
@@ -67,6 +73,13 @@ const Projects = () => {
           <Project
             title="Portfolio"
             subtitle="Simple responsive web app powered by React with Tailwind, Framer Motion, and React Hook Form."
+            link=""
+          />
+
+          <Project
+            title="Fruit Crush"
+            subtitle="Candy Crush game clone demonstrating basic functionality. Powered by React in Typescript with Redux Toolkit and Tailwind."
+            link="https://kbendofruitcrush.vercel.app/"
           />
 
           <div
