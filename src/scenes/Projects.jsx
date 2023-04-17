@@ -78,15 +78,21 @@ const Projects = () => {
 
           <Project
             title="Fruit Crush"
-            subtitle="Candy Crush game clone demonstrating basic functionality. Powered by React in Typescript with Redux Toolkit and Tailwind."
+            subtitle="Candy Crush clone game demonstrating basic functionality. Powered by React in Typescript with Redux Toolkit and Tailwind."
             link="https://kbendofruitcrush.vercel.app/"
           />
 
           <div
-            className="flex justify-center text-center items-center p-10 bg-red 
+            className="flex justify-center text-center items-center p-10 bg-red hover:text-deep-blue transition duration-500
                       max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
-            MORE TO COME
+            <a
+              href="https://github.com/kzbendo?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MORE TO COME<br></br>CHECK OUT THE REPOSITORIES HERE
+            </a>
           </div>
         </motion.div>
       </div>
