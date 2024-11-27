@@ -30,7 +30,7 @@ const AboutMe = () => {
           {isAboveMediumScreens ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-                      before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
+                      before:rounded-[10px] before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
             >
               <img alt="about" className="z-10" src="assets/retro.jpg" />
             </div>

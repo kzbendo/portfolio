@@ -10,7 +10,7 @@ const Footer = () => {
             KENNETH BENDO
           </p>
           <p className="font-playfair text-md text-white">
-            ©2023 BENDO. All Rights Reserved.
+            ©2024 BENDO. All Rights Reserved.
           </p>
         </div>
       </div>

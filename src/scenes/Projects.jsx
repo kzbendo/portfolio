@@ -79,11 +79,17 @@ const Projects = () => {
           <Project
             title="Fruit Crush"
             subtitle="Candy Crush clone game demonstrating basic functionality. Powered by React in Typescript with Redux Toolkit and Tailwind."
-            link="https://kbendofruitcrush.vercel.app/"
+            link="https://kbfruitcrush.vercel.app/"
+          />
+
+          <Project
+            title="Japanese Kana Practice"
+            subtitle="Japanese hiragana and katanaka flashcard practice app with basic functionality. Powered by Vite in Typescript and Tailwind."
+            link="https://kbjpkanapractice.vercel.app/"
           />
 
           <div
-            className="flex justify-center text-center items-center p-10 bg-red hover:text-deep-blue transition duration-500
+            className="justify-center text-center items-center p-10 bg-red hover:text-deep-blue transition duration-500
                       max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
             <a
